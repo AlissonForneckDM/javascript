@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do veiculo <input type="number" name="vel" id="vel"> Km/h
+    <input type="button" value="Verificar" onclick="radar()">
+    <div id="res">Resultado</div>
+    <script>
+        function radar(){
+            //var vtext = window.document.getElementById('vel')
+            var vtext = window.document.querySelector('input#vel')
+            var v = Number(vtext.value)
+            if (v > 60){
+                res.innerHTML = ` <p>voce passou a ${v} e será <strong>MULTADO</strong>!!!</p>`
+            }else{
+                res.innerHTML = ` <p>voce passou a ${v} e <strong>não será multado</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
