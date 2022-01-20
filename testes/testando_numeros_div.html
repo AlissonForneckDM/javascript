@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <style>
+        div#resu{
+            width: 300px;
+            height: 20px;
+            background-color: white;
+            border: solid 2px black;
+        }
+        div#msg{
+            font: normal 18pt Arial;
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="resu"></div>
+    <div id="msg" onclick="somar()">1</div>
+    <div id="teste" onclick="somaroutro()">2</div>
+    <input type="button" value="Somar" onclick="somatorio()">
+    <script>
+        function somar(){
+            var p1 = window.document.querySelector('div#msg')
+           // p1.innerHTML ++
+            var p2 = window.document.querySelector('div#resu')
+            //var n2 = Number(p2.value)
+            p2.innerHTML +=1
+           
+        }
+        function somaroutro(){
+            var p2 = window.document.querySelector('div#resu')
+            p2.innerHTML +=2
+        }function somatorio(){
+            
+        }
+    </script>
+</body>
+</html>
