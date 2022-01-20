@@ -12,7 +12,13 @@
     <div id="res"></div>
     <script>
         function exportar(){
-            var 
+            var pais = window.document.querySelector('input#pais')
+            var resultado = String(pais.value)
+            if (resultado != 'Brasil'){
+                res.innerHTML = `Voce esta no ${pais} e é brasileiro`
+            }else{
+                res.innerHTML = 'Voce é estrangeiro'
+            }
         }
     </script>
 </body>
