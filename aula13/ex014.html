@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas do dia</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(39, 82, 146);
+            color: white;
+        }
+        section{
+            color: black;
+            margin: auto;
+            width: 400px;
+            height: 250px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.705);
+        }
+        div#imagem{
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            
+        }
+        img{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-top: 15px;
+        }
+        footer{
+            margin-top: 10px;
+            
+        }
+    </style>
+</head>
+<body id ="corpo">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="texto"></div>
+        <div id="imagem">
+            <img id='img' src="manha.jpg" alt="">
+        </div>
+    </section>
+    <footer>Curso em video</footer>
+    <script>
+        var agora = new Date()
+        var hora = 20
+        texto.innerText = `Agora são ${hora}`
+        if(hora < 12){
+            corpo.style.background = 'yellow'
+        }else if (hora < 18){
+            corpo.style.background = 'orange'
+            img.src = 'tarde.jpg'
+        }
+        else{
+            corpo.style.background = 'rgb(20, 19, 19)'
+            img.src ='noite.jpg'
+        }
+    </script>
+</body>
+</html>
