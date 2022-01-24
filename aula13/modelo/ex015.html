@@ -12,11 +12,13 @@
     <section>
         <div>
             <p>Ano nascimento: <input type="number" name="idade" id="idade"></p>
-            <p>Sexo: Masculino <input type="radio" name="" id=""> </p>
-            <p><input type="button" value="Verificar"></p>
+            <p>Sexo: 
+                <input type="radio" name="radsex" id="mas" checked> <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem"> <label for="fem">Feminino</label></p>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
         </div>
         <div id="conteudo">
-            Preencha os dados acima para ver o resultado!
+            <p>Preencha os dados acima para ver o resultado!</p>
             <img src="" alt="">
         </div>
     </section>

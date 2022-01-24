@@ -23,3 +23,12 @@ footer{
     margin-top: 15px;
     font-style: italic;
 }
+div#conteudo{
+    margin: auto;
+}
+div#conteudo > img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
