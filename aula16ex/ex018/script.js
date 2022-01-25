@@ -1,25 +1,32 @@
-function adicionar(){
-    var n = document.querySelector('input#inicio')
-    var mos = document.querySelector('select#dados')
-    var valor = Number(n.value)
-    if(valor == 0){
-        window.alert('digite um valor valido')
+let n = document.querySelector('input#inicio')
+let mos = document.querySelector('select#dados')
+let lista = document.querySelector('select#dados')
+let res = document.querySelector('div#conteudo')
+let valores = []
+let item = document.createElement('option')
+var num = Number(n.value)
+function isNumero(n){
+    if (Number(n) >= 1 && Number(n) <= 100){
+        return true
     }else{
-        
-        var item = document.createElement('option')
-        item.text = `Valor ${valor} adicionado`
-        mos.appendChild(item)
-        //conteudo.innerHTML += `${array}`
+        return false
     }
 }
-var n = document.querySelector('input#inicio')
-var valor = Number(n.value)
-var array = []
-array.push(valor)
-function verificar(){
-    
-    conteudo.innerHTML += `${array}`
-    //conteudo.innerHTML += `teste`
+function inLista(n,l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+}
+
+function adicionar(){
+   if (isNumero(n.value) && !inLista(n.value, valores)){
+       item.text = `Adicionado o valor ${num}`
+       lista.appendChild(item)
+   }else{
+       window.alert('Valor invalido ou já encontrado na lista')
+   }
 }
 
 //var array = []

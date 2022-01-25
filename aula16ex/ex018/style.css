@@ -23,6 +23,11 @@ footer{
     margin-top: 15px;
     font-style: italic;
 }
+select{
+    width: 150px;
+    display: block;
+    margin-bottom: 5px;
+}
 div#conteudo{
     margin: auto;
 }
