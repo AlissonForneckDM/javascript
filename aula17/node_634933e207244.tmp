@@ -1,0 +1,8 @@
+//calculo de fatorial
+let x = function(x){
+    for(var c= x; c > 0; c-1){
+        x=x*c
+    }
+    return x
+}
+console.log(x(5))
