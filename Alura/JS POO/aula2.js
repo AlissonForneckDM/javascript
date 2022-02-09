@@ -7,6 +7,12 @@ class Cliente {
 class ContaCorrente{
     agencia;
     saldo;
+
+    saque(valor){
+        if (this.saldo >= valor){
+            this.saldo -= valor
+        }
+    }
 }
 const cliente1 = new Cliente()
 cliente1.nome = 'Roger'
@@ -16,16 +22,13 @@ const cliente2 = new Cliente()
 cliente2.nome = 'Maria'
 cliente2.cpf = 11122233344
 
-const contaRicardo = new ContaCorrente()
-contaRicardo.saldo = 0
-contaRicardo.agencia = 1001
+const contaRoger = new ContaCorrente()
+contaRoger.saldo = 0
+contaRoger.agencia = 1001
 
-console.log(contaRicardo.saldo)
-contaRicardo.saldo = 100
-console.log(contaRicardo.saldo)
-let valorSacado = 50
-if(valorSacado > contaRicardo.saldo){
-    console.log('Voce não pode continuar com essa operação')
-}else{
-    contaRicardo.saldo -= valorSacado
-}console.log(contaRicardo.saldo)
+console.log(contaRoger.saldo)
+contaRoger.saldo = 100
+console.log(contaRoger.saldo)
+
+
+console.log(contaRoger.saque(100))
