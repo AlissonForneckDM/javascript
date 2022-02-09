@@ -28,7 +28,5 @@ contaRoger.agencia = 1001
 
 console.log(contaRoger.saldo)
 contaRoger.saldo = 100
+contaRoger.saque(50)
 console.log(contaRoger.saldo)
-
-
-console.log(contaRoger.saque(100))
