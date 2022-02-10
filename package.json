@@ -1,0 +1,20 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto do banco bytebank para seus cliente",
+  "main": "aula2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alissonforneck/javascript.git"
+  },
+  "author": "Alisson",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/alissonforneck/javascript/issues"
+  },
+  "homepage": "https://github.com/alissonforneck/javascript#readme"
+}
