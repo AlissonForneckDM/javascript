@@ -1,5 +1,7 @@
 export class ContaCorrente{
     agencia;
+    cliente;
+    
     // para deixar um metodo privado não oficial #saldo
     // https://github.com/tc39/proposal-class-fields#private-fields
     // por convenção da sociedade atualmente usamos o _saldo
