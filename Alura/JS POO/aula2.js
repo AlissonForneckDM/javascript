@@ -13,6 +13,12 @@ class ContaCorrente{
             this.saldo -= valor
         }
     }
+
+    deposito(valor){
+        if(valor > 0){
+        this.saldo += valor
+        }
+    }
 }
 const cliente1 = new Cliente()
 cliente1.nome = 'Roger'
@@ -26,7 +32,7 @@ const contaRoger = new ContaCorrente()
 contaRoger.saldo = 0
 contaRoger.agencia = 1001
 
-console.log(contaRoger.saldo)
-contaRoger.saldo = 100
+contaRoger.deposito(100)
+console.log(contaRoger)
 contaRoger.saque(50)
 console.log(contaRoger.saldo)
