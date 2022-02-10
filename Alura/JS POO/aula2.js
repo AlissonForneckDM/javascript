@@ -7,19 +7,20 @@ class Cliente {
 class ContaCorrente{
     agencia;
     // para deixar um metodo privado não oficial #saldo
+    // https://github.com/tc39/proposal-class-fields#private-fields
     // por convenção da sociedade atualmente usamos o _saldo
-    saldo = 0;
+    _saldo = 0;
 
     saque(valor){
-        if (this.saldo >= valor){
-            this.saldo -= valor
+        if (this._saldo >= valor){
+            this._saldo -= valor
+            return valor
         }
     }
 
     deposito(valor){
-        if(valor > 0){
-        this.saldo += valor
-        }
+        if(valor <= 0) return;
+        this._saldo += valor
     }
 }
 const cliente1 = new Cliente()
@@ -34,6 +35,6 @@ const contaRoger = new ContaCorrente()
 contaRoger.agencia = 1001
 
 contaRoger.deposito(100)
+const valorSacado = contaRoger.saque(50)
 console.log(contaRoger)
-contaRoger.saque(50)
-console.log(contaRoger.saldo)
+console.log(valorSacado)
