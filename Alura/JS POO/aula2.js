@@ -6,7 +6,9 @@ class Cliente {
 }
 class ContaCorrente{
     agencia;
-    saldo;
+    // para deixar um metodo privado não oficial #saldo
+    // por convenção da sociedade atualmente usamos o _saldo
+    saldo = 0;
 
     saque(valor){
         if (this.saldo >= valor){
@@ -29,7 +31,6 @@ cliente2.nome = 'Maria'
 cliente2.cpf = 11122233344
 
 const contaRoger = new ContaCorrente()
-contaRoger.saldo = 0
 contaRoger.agencia = 1001
 
 contaRoger.deposito(100)
