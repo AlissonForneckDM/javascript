@@ -4,6 +4,7 @@ import { Cliente } from "./Cliente.js";
 // por convenção da sociedade atualmente usamos o 
     
 export class ContaCorrente{
+    static numeroDeContas = 0
     agencia;
     _cliente;
 
@@ -26,6 +27,7 @@ export class ContaCorrente{
     constructor(cliente, agencia){
         this.cliente = cliente
         this.agencia = agencia
+        ContaCorrente.numeroDeContas ++
     }
 
     saque(valor){
