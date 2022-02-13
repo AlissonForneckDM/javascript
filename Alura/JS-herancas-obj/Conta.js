@@ -20,10 +20,14 @@ export class Conta{
 
     saque(valor){
         let taxa = 1
+        return this._saque(valor, taxa)
+    }
+    _saque(valor, taxa){
         let valorSacado = valor * taxa
         if(this._saldo >= valor){
             this._saldo -= valorSacado
-        }return valor
+            return valorSacado
+        }return 0
     }
 
     deposito(valor){
@@ -34,5 +38,8 @@ export class Conta{
     transferir(valor, conta){
         const valorTransferido = this.saque(valor)
         conta.deposito(valorTransferido)
+    }
+    teste(){
+        console('Testand o funcionamento do super, estou na conta')
     }
 }

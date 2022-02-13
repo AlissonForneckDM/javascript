@@ -1,4 +1,3 @@
-import { Cliente } from "./Cliente.js"
 import { Conta } from "./Conta.js"
 
 export class ContaCorrente extends Conta{
@@ -6,5 +5,9 @@ export class ContaCorrente extends Conta{
     constructor(cliente,agencia){
         super(saldoInicial,cliente,agencia)
         ContaCorrente.numeroDeContas +=1
+    }
+    saque(valor){
+        let taxa = 1.1
+        return super._saque(valor,taxa)
     }
 }
