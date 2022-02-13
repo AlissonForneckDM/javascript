@@ -21,9 +21,9 @@ export class Conta{
         return this._saldo
     }
 
+    //metodo abstrato
     saque(valor){
-        let taxa = 1
-        return this._saque(valor, taxa)
+        
     }
     _saque(valor, taxa){
         let valorSacado = valor * taxa
