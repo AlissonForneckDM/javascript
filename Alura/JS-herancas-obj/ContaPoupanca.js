@@ -1,7 +1,9 @@
 import { Conta } from "./Conta.js"
 
 export class ContaPoupanca extends Conta{
-    super(saldoInicial,cliente,agencia)
+    constructor(cliente,agencia){
+        super(0,cliente,agencia)
+    }
 
     teste(){
         super.teste()
