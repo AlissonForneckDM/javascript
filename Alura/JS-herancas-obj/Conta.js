@@ -23,7 +23,7 @@ export class Conta{
 
     //metodo abstrato
     saque(valor){
-        
+        throw new Error('O método Sacar da conta é abstrato')
     }
     _saque(valor, taxa){
         let valorSacado = valor * taxa
