@@ -4,9 +4,25 @@ export class Conta{
         this._cliente = cliente
         this._agencia = agencia
     }
+
+    set cliente(nomeCliente){
+        if(nomeCliente instanceof(Cliente)){
+            this._cliente = nomeCliente
+        }
+    }
+    get cliente(){
+        return this._cliente
+    }
+
+    get saldo(){
+        return this._saldo
+    }
+
     saque(valor){
+        let taxa = 1
+        let valorSacado = valor * taxa
         if(this._saldo >= valor){
-            this._saldo -= valor
+            this._saldo -= valorSacado
         }return valor
     }
 
